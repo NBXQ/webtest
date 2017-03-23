@@ -17,9 +17,10 @@ from django.contrib import admin
 from home import views as home_views
 
 urlpatterns = [
+    url(r'^index/$',home_views.index),
     url(r'^add/',home_views.add),
-    url(r'^add2/(\w+)/(\w+)/(\w+)',home_views.add2),
+    url(r'^add2/(\w+)/(\w+)/(\w+)/',home_views.add2),
     url(r'^update/$',home_views.update),
     url(r'^delete/$',home_views.delete),
     url(r'^admin/', include(admin.site.urls)),
-]
+    ]

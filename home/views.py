@@ -4,6 +4,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from home.models import User
 
+def index(request):
+	context={}
+	context['name']='nbxq'
+	return render(request,"index.html",context)
+
 def add(request):
 	name=request.GET['name']
 	age=request.GET['age']
